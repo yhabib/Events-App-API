@@ -9,5 +9,6 @@ import events.domain.Location;
 
 @Repository
 public interface LocationRepository extends JpaRepository<Location, Long> {
+	
 	List<Location> findAllByState(String state);
 }

@@ -2,12 +2,17 @@ package events.service;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import events.domain.Event;
 import events.repository.EventRepository;
 
+@Service
+@Transactional(readOnly = true)
 public class DefaultEventService implements EventService {
 
-	private EventRepository repository;
+	private final EventRepository repository;
 	
 	DefaultEventService(EventRepository repository) {
 		this.repository = repository;

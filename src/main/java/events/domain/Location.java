@@ -19,7 +19,7 @@ import lombok.Setter;
 public class Location {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+//	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Setter(AccessLevel.PRIVATE)
 	private Long id;
 	

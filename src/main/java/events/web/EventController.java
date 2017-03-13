@@ -7,14 +7,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import events.domain.Event;
+import events.service.DefaultEventService;
 import events.service.EventService;
 
 @RestController
 @RequestMapping("/api")
-public class EventsController {
+public class EventController {
+	
 	private final EventService service;
 	
-	public EventsController(EventService eventService) {
+	public EventController(DefaultEventService eventService) {
 		this.service = eventService;
 	}
 	

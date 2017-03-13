@@ -22,7 +22,7 @@ import lombok.Setter;
 public class Event {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+//	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Setter(AccessLevel.PRIVATE)
 	private Long id;
 	
@@ -44,6 +44,9 @@ public class Event {
 	@OneToOne
 	private Location location;
 	
+	@Column(name = "rate")
+	private Integer rate;
+	
 		
 	public Event() {
 //		required by JPA
@@ -63,6 +66,19 @@ public class Event {
 			String description, Location location) {
 		this(id, name, eventStartDate, eventImage, description, location);
 		this.eventEndDate = eventEndDate;
+	}
+	
+	public Event(Long id, String name, LocalDateTime eventStartDate, String eventImage,
+			String description, Location location, Integer rate) {
+		this(id, name, eventStartDate, eventImage, description, location);
+		this.rate = rate;
+	}
+	
+	public Event(Long id, String name, LocalDateTime eventStartDate, LocalDateTime eventEndDate, String eventImage,
+			String description, Location location, Integer rate) {
+		this(id, name, eventStartDate, eventImage, description, location);
+		this.eventEndDate = eventEndDate;
+		this.rate = rate;
 	}
 	
 }

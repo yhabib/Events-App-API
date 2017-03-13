@@ -4,12 +4,18 @@ import static java.util.stream.Collectors.toList;
 
 import java.util.List;
 
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import events.domain.Location;
 import events.repository.LocationRepository;
 
+
+@Service
+@Transactional(readOnly = true)
 public class DefaultLocationService implements LocationService {
 
-	private LocationRepository repository;
+	private final LocationRepository repository;
 	
 	public DefaultLocationService(LocationRepository locationRepository) {
 		this.repository = locationRepository;
