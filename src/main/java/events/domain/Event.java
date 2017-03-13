@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.PrePersist;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import lombok.AccessLevel;
@@ -41,7 +41,7 @@ public class Event {
 	@Column(name = "description", columnDefinition = "TEXT NOT NULL")
 	private String description;
 	
-	@Column(name = "location", nullable = false)
+	@OneToOne
 	private Location location;
 	
 		

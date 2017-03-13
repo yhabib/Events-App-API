@@ -3,7 +3,9 @@
 ## Paths:
 * GET: `/api/events`
 * GET: `/api/event/:eventId`
-* GET: `/api/event/count`
+* GET: `/api/events/count`
+* GET: `/api/locations/state`
+* GET: `/api/locations/city`
 
 
 
@@ -28,14 +30,14 @@
 
 
 ## Repository Layer
+
 ### EventRepository
 * `Event findById()`
-* `List<Event> findAll()`
-* `Integer count()`
 
+### LocationRepository
 
 ## Service Layer
 ### EventService
 * `Event findById()`
 * `List<Event> findAll()`
-* `Integer count()`
+* `Long count()`
