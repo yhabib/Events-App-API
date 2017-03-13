@@ -36,8 +36,13 @@
 
 ### LocationRepository
 
+
 ## Service Layer
+
 ### EventService
 * `Event findById()`
 * `List<Event> findAll()`
 * `Long count()`
+
+### LocationService
+* ``
