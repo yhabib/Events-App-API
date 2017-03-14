@@ -38,7 +38,7 @@ public class Event {
 	@Column(name = "event_image", nullable = false)
 	private String eventImage;
 	
-	@Column(name = "description", columnDefinition = "TEXT NOT NULL")
+	@Column(name = "description", columnDefinition = "CLOB NOT NULL")
 	private String description;
 	
 	@OneToOne
