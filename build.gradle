@@ -44,10 +44,11 @@ dependencies {
 	compile('org.projectlombok:lombok')
 	compile("com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonDateTimeVersion}")
 	compile("org.hibernate:hibernate-java8:${hibernateVersion}")
+	compile('com.h2database:h2')
 
 	// compile('org.webjars:webjars-locator:0.32')
 
-	runtime('com.h2database:h2')
+	//runtime('com.h2database:h2')
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')
