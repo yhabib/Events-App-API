@@ -2,6 +2,7 @@ package events.web;
 
 import java.util.List;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,8 +19,13 @@ public class LocationController {
 		this.service = locationService;
 	}
 	
-	@RequestMapping("/location/cities")
-	public List<String> getAllEvents() {
+	@RequestMapping("/location/states")
+	public List<String> getAllEventsInAState() {
 		return service.getAllStates();
+	}
+	
+	@RequestMapping("/location/cities/{state}")
+	public List<String> getAllStates(@PathVariable String state) {
+		return service.getAllCities(state);
 	}
 }

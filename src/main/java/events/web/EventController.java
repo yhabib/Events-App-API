@@ -24,4 +24,9 @@ public class EventController {
 	public List<Event> getAllEvents() {
 		return service.findAll();
 	}
+	
+	@GetMapping("/events/count")
+	public Long getNumberOfEvents() {
+		return service.count();
+	}
 }
