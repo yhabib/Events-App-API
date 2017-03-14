@@ -19,12 +19,12 @@ public class LocationController {
 		this.service = locationService;
 	}
 	
-	@RequestMapping("/location/states")
+	@RequestMapping("/locations/states")
 	public List<String> getAllEventsInAState() {
 		return service.getAllStates();
 	}
 	
-	@RequestMapping("/location/cities/{state}")
+	@RequestMapping("/locations/states/{state}/cities")
 	public List<String> getAllStates(@PathVariable String state) {
 		return service.getAllCities(state);
 	}
