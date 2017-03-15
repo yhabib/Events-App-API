@@ -1,5 +1,6 @@
 package events.domain;
 
+import java.io.Serializable;
 import java.time.LocalDateTime;
 
 import javax.persistence.Column;
@@ -19,8 +20,13 @@ import lombok.Setter;
 @Table(name = "events")
 @Data
 @EqualsAndHashCode(exclude = "id")
-public class Event {
+public class Event implements Serializable {
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)  // no need of it
 	@Setter(AccessLevel.PRIVATE)
@@ -48,8 +54,7 @@ public class Event {
 	private Integer rate;
 	
 		
-	public Event() {
-//		required by JPA
+	protected Event() {
 	}
 
 	public Event(Long id, String name, LocalDateTime eventStartDate, String eventImage, String description,
@@ -81,4 +86,12 @@ public class Event {
 		this.rate = rate;
 	}
 	
+//	public String getState() {
+//		return (this.location != null ? this.location.getState() : null);
+//	}
+	
+//	public String getCity() {
+//		return (this.location != null ? this.location.getCity() : null);
+//	}
+//	
 }

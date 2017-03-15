@@ -1,5 +1,7 @@
 package events.domain;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -16,8 +18,10 @@ import lombok.Setter;
 @Table(name = "locations")
 @Data
 @EqualsAndHashCode(exclude = "id")
-public class Location {
+public class Location implements Serializable {
 		
+	private static final long serialVersionUID = 1L;
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)  // no need of it
 	@Setter(AccessLevel.PRIVATE)
@@ -41,8 +45,7 @@ public class Location {
 	@Column(name = "number", nullable = false)
 	private Integer number;
 	
-	public Location() {
-//		required by JPA
+	protected Location() {
 	}
 
 	public Location(String country, String state, String city, Integer postCode, String street, Integer number) {
