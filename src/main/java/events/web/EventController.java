@@ -22,6 +22,8 @@ public class EventController {
 		this.service = eventService;
 	}
 	
+	
+	// logic in the service layer instead here !!! to be refactored after tests!!!!
 	@GetMapping("/events")
 	public List<Event> getAllEvents(@RequestParam(required=false) String state, @RequestParam(required=false) String city) {
 		if(state == null)
