@@ -29,8 +29,17 @@ public class DefaultEventService implements EventService {
 	}
 
 	@Override
+	public List<Event> findAllByState(String state) {
+		return repository.findByLocationState(state);
+	}
+	
+	@Override
+	public List<Event> findAllByStateAndCity(String state, String city) {
+		return repository.findByLocationStateAndLocationCity(state, city);
+	}
+	
+	@Override
 	public Event findById(Long id) throws EventNotFoundException {
 		return repository.findById(id);
 	}
-
 }
