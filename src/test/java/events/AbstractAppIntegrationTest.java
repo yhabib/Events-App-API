@@ -11,6 +11,5 @@ import org.springframework.transaction.annotation.Transactional;
 @SpringBootTest(webEnvironment = WebEnvironment.NONE)
 @Transactional
 @Sql("/test-data.sql")
-public class AbstractAppIntegrationTest {
-
+public abstract class AbstractAppIntegrationTest {
 }
