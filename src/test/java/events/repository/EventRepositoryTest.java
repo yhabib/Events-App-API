@@ -6,8 +6,8 @@ import java.util.List;
 
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
 
+import events.AbstractAppIntegrationTest;
 import events.domain.Event;
 
 public class EventRepositoryTest extends AbstractAppIntegrationTest {
@@ -16,9 +16,6 @@ public class EventRepositoryTest extends AbstractAppIntegrationTest {
 	
 	@Autowired
 	EventRepository repository;
-	
-	@Autowired
-	JdbcTemplate jdbcTemplate;
 	
 	@Test
 	public void count() {
