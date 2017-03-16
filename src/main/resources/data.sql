@@ -16,7 +16,7 @@ insert into locations(id, city, country, number, post_code, state, street) value
 insert into locations(id, city, country, number, post_code, state, street) values (16, 'Lausanne', 'Switzerland', 5, 1005, 'Vaud',  'Rue du Bugnon');
 insert into locations(id, city, country, number, post_code, state, street) values (17, 'Lausanne', 'Switzerland', 8, 1005, 'Vaud',  'Rue du Bugnon');
 insert into locations(id, city, country, number, post_code, state, street) values (18, 'Lausanne', 'Switzerland', 6, 1005, 'Vaud',  'Place de la Cathédrale');
-insert into locations(id, city, country, number, post_code, state, street) values (19, 'Zurich', 'Switzerland', 452, 8048, 'Zurich',  'Hohlstrasse');
+insert into locations(id, city, country, number, post_code, state, street) values (19, 'Kilchberg', 'Switzerland', 110, 8802, 'Zurich',  'Alte Landstrasse');
 insert into locations(id, city, country, number, post_code, state, street) values (20,'Genève', 'Switzerland', 65, 1205, 'Genève',  'Boulevard Carl-Vogt');
 
 
